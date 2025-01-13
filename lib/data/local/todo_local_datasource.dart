@@ -42,7 +42,6 @@ class TodoLocalDataSourceImpl implements TodoLocalDataSource {
       } in items)
         TodoEntity(userId: userId, id: id, title: title, completed: isComplete == 1 ? true: false)
     ];
-    print("Get ToDo List ${result}");
     return result;
   }
 
@@ -58,7 +57,6 @@ class TodoLocalDataSourceImpl implements TodoLocalDataSource {
       final isComplete = result.first['userId'] as int;
       return TodoEntity(userId: userId, id: id, title: title, completed: isComplete == 1 ? true : false);
     }
-
   }
 
 
